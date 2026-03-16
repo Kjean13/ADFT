@@ -124,7 +124,7 @@ The GUI is backend-driven: uploads, conversion, investigation, alerts, timeline,
 ## Graph-based pivoting
 
 ADFT supports graph-based investigation from a selected pivot, with visible relationships, time scoping, and analyst-oriented navigation.
-![ADFT Graph Pivot](docs/screenshots/04-benchmark.png)
+![ADFT Graph Pivot](docs/screenshots/02-dashboard.png)
 
 ## Generated artefacts
 

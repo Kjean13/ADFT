@@ -10,8 +10,13 @@ This official v1.0 release ships one coherent product surface:
 
 ADFT ingests exported evidence, converts every supported source into canonical JSONL, applies deterministic detections and correlations, computes an observed AD exposure score, reconstructs attack progression, and generates investigation and hardening artefacts.
 
+## Quick overview
+
+ADFT analyzes offline Windows / AD / SIEM-oriented datasets and produces investigation artifacts through a CLI and an integrated GUI.
+
+![ADFT CLI summary](docs/screenshots/01-cli-summary.png)
+
 ## Scope of v1.0
-![alt text](image.png)
 
 ADFT v1.0 supports:
 
@@ -102,7 +107,7 @@ Then open:
 ```text
 http://127.0.0.1:8765
 ```
-![alt text](image-1.png)
+![ADFT Dashboard](docs/screenshots/02-dashboard.png)
 
 The GUI is backend-driven: uploads, conversion, investigation, alerts, timeline, reconstruction, graph, benchmark, hardening and export views read the real ADFT run state instead of replaying business logic in the browser.
 
@@ -119,7 +124,7 @@ The GUI is backend-driven: uploads, conversion, investigation, alerts, timeline,
 ## Graph-based pivoting
 
 ADFT supports graph-based investigation from a selected pivot, with visible relationships, time scoping, and analyst-oriented navigation.
-![alt text](image-2.png)
+![ADFT Graph Pivot](docs/screenshots/03-graph-pivot.png)
 
 ## Generated artefacts
 
@@ -182,14 +187,14 @@ python3 main.py ui -o /tmp/adft_release_reports --host 127.0.0.1 --port 8765
 ## Benchmark and validation
 
 The benchmark view provides a compact product validation surface with run metrics and packaged release checks.
-![alt text](image-3.png)
+![ADFT Benchmark](docs/screenshots/04-benchmark.png)
 
 See also:
 
 - `docs/TESTING.md`
 - `docs/ARCHITECTURE.md`
 - `docs/DEPENDENCIES.md`
-- `RELEASE_VALIDATION.md`
+- `docs/RELEASE_VALIDATION.md`
 
 ## UI language toggle
 
@@ -198,4 +203,4 @@ The integrated GUI includes a persistent FR/EN language switch in the top bar. T
 
 ## Demo dataset
 
-ADFT v1.0 ships with `adft/datasets/ad_prod_investigation_post_siem_demo_1000_events` and `ad_prod_investigation_post_siem_demo_1000_events.zip` for an end-to-end ransomware demonstration that exercises conversion, timeline, graph, alerts and exports.
+ADFT v1.0 ships with `adft/datasets/ad_prod_investigation_post_siem_demo_1000_events.json` for an end-to-end ransomware demonstration that exercises conversion, timeline, graph, alerts and exports.

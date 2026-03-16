@@ -1,0 +1,29 @@
+name: Feature request
+description: Suggest an improvement to ADFT
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or need
+      description: What technical or workflow problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the change as concretely as possible.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and impact
+      description: Which modules, commands, docs, or datasets are affected?
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation idea
+      description: How should this be tested or demonstrated?

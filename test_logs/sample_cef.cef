@@ -1,0 +1,2 @@
+CEF:0|Microsoft|Windows|10.0|4625|Logon Failure|7|src=10.0.0.9 duser=bob dhost=DC01 rt=2026-02-28T12:01:10Z act=Failed logon
+CEF:0|Microsoft|Windows|10.0|4672|Special Logon|5|src=10.0.0.9 duser=bob dhost=DC01 rt=2026-02-28T12:01:20Z act=Privilege assigned

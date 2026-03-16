@@ -1,0 +1,2 @@
+<134>Feb 28 12:01:10 DC01 Microsoft-Windows-Security-Auditing[4625]: Failed logon for user bob from 10.0.0.9
+<134>Feb 28 12:01:20 DC01 Microsoft-Windows-Security-Auditing[4672]: Special privileges assigned to bob

@@ -1,0 +1,5 @@
+[
+  {"EventID": 4648, "TargetUserName": "alice", "IpAddress": "192.168.1.5", "TimeCreated": "2026-03-13T10:00:00Z"},
+  {"EventID": 4688, "TargetUserName": "alice", "IpAddress": "192.168.1.6", "TimeCreated": "2026-03-13T10:05:00Z", "ProcessName": "C:\\Tools\\mimikatz.exe"},
+  {"EventID": 4688, "TargetUserName": "bob", "IpAddress": "192.168.1.7", "TimeCreated": "2026-03-13T10:08:00Z", "NewProcessName": "C:\\Windows\\System32\\notepad.exe"}
+]

@@ -1,0 +1,30 @@
+__pycache__/
+*.pyc
+*.pyo
+.eggs/
+*.egg-info/
+build/
+.venv/
+venv/
+.env
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+tmp_reports/
+*.bak
+node_modules/
+bun.lock
+
+# Local investigation outputs
+reports_core/
+reports_demo/
+reports_demo_ad_1000/
+reports_*/
+*.jsonl
+
+# Frontend note:
+# adft/webui_dist/ is intentionally committed for the packaged GUI.
+# frontend_source/node_modules/ must stay ignored.

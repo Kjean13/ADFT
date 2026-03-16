@@ -1,0 +1,6 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="28" fill="#08111F"/>
+  <path d="M64 18L99 30V58C99 81 83 102 64 110C45 102 29 81 29 58V30L64 18Z" fill="#0F2745" stroke="#38BDF8" stroke-width="4"/>
+  <path d="M64 34L80 40V57C80 68.5 72.4 79 64 83C55.6 79 48 68.5 48 57V40L64 34Z" fill="#0B1B31" stroke="#22C55E" stroke-width="3"/>
+  <text x="64" y="74" text-anchor="middle" fill="#E2E8F0" font-size="24" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="700">AD</text>
+</svg>

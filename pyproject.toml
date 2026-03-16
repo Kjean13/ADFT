@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adft"
+version = "1.0.0"
+description = "ADFT v1.0 — offline AD investigation toolkit with integrated GUI and canonical JSONL ingestion"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{name = "Jean Koumou"}]
+keywords = ["active-directory", "forensics", "dfir", "incident-response", "soc", "windows-logs", "mitre-attack"]
+
+dependencies = [
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov>=4.0"]
+evtx = ["python-evtx>=0.7"]
+full = ["python-evtx>=0.7"]
+
+[project.scripts]
+adft = "adft.cli.main:cli"
+
+[tool.setuptools.package-data]
+adft = [
+  "datasets/**/*.json",
+  "datasets/**/*.ndjson",
+  "datasets/**/*.yaml",
+  "datasets/**/*.yml",
+  "datasets/**/*.csv",
+  "datasets/**/*.cef",
+  "datasets/**/*.syslog",
+  "datasets/**/*.md",
+  "datasets/**/*.evtx",
+  "datasets/**/*.zip",
+  "webui_dist/**/*",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["adft*"]
+exclude = ["data*", "reports_poc*", "test_logs*", "final_test_logs*", "docs*"]

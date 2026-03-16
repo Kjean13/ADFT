@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 7%;
+    --foreground: 210 20% 90%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 220 18% 12%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 200 95% 48%;
+    --primary-foreground: 220 20% 7%;
+
+    --secondary: 220 16% 16%;
+    --secondary-foreground: 210 20% 80%;
+
+    --muted: 220 14% 14%;
+    --muted-foreground: 215 12% 50%;
+
+    --accent: 200 80% 40%;
+    --accent-foreground: 210 20% 95%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 14% 18%;
+    --input: 220 14% 18%;
+    --ring: 200 95% 48%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --severity-critical: 0 72% 51%;
+    --severity-high: 25 95% 53%;
+    --severity-medium: 45 93% 47%;
+    --severity-low: 200 95% 48%;
+    --severity-info: 215 12% 50%;
+
+    --success: 142 71% 45%;
+    --warning: 45 93% 47%;
+
+    --surface-0: 220 20% 7%;
+    --surface-1: 220 18% 10%;
+    --surface-2: 220 16% 13%;
+    --surface-3: 220 14% 16%;
+
+    --cyber-glow: 200 95% 48%;
+    --cyber-glow-subtle: 200 60% 20%;
+
+    --sidebar-background: 220 20% 5%;
+    --sidebar-foreground: 210 20% 70%;
+    --sidebar-primary: 200 95% 48%;
+    --sidebar-primary-foreground: 220 20% 7%;
+    --sidebar-accent: 220 16% 13%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 220 14% 14%;
+    --sidebar-ring: 200 95% 48%;
+
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--surface-0));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .glow-border {
+    box-shadow: 0 0 0 1px hsl(var(--cyber-glow) / 0.2), 0 0 20px -5px hsl(var(--cyber-glow) / 0.15);
+  }
+  .glow-text {
+    text-shadow: 0 0 10px hsl(var(--cyber-glow) / 0.5);
+  }
+  .severity-critical { color: hsl(var(--severity-critical)); }
+  .severity-high { color: hsl(var(--severity-high)); }
+  .severity-medium { color: hsl(var(--severity-medium)); }
+  .severity-low { color: hsl(var(--severity-low)); }
+  .severity-info { color: hsl(var(--severity-info)); }
+  .bg-severity-critical { background-color: hsl(var(--severity-critical) / 0.15); }
+  .bg-severity-high { background-color: hsl(var(--severity-high) / 0.15); }
+  .bg-severity-medium { background-color: hsl(var(--severity-medium) / 0.15); }
+  .bg-severity-low { background-color: hsl(var(--severity-low) / 0.15); }
+}

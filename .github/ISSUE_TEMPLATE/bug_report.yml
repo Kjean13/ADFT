@@ -1,0 +1,51 @@
+name: Bug report
+description: Report a reproducible defect in ADFT
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please keep the report factual and reproducible.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: e.g. v1.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, installation method, optional extras used
+      placeholder: Ubuntu 24.04, Python 3.11, pip install -e ".[evtx,dev]"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run ...
+        2. Load ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs, screenshots, or sample evidence
+      description: Redact sensitive data when needed.

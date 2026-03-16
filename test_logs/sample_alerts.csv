@@ -1,0 +1,4 @@
+EventID,User,Timestamp,Computer,IpAddress,Message
+4625,bob,2026-02-28T12:01:10Z,DC01,10.0.0.9,Failed logon attempt
+4672,bob,2026-02-28T12:01:20Z,DC01,10.0.0.9,Special privileges assigned
+4768,alice,2026-02-28T12:02:00Z,DC01,10.0.0.15,Kerberos TGT request

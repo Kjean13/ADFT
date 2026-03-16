@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  tests-core:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install core + dev dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Run test suite
+        run: pytest -q
+      - name: Run release smoke commands
+        run: |
+          python main.py convert adft/datasets/demo_mixed_inputs -o /tmp/adft_convert_ci
+          python main.py investigate adft/datasets/demo_mixed_inputs -o /tmp/adft_ci_reports
+          python main.py summary -o /tmp/adft_ci_reports
+          python main.py story -o /tmp/adft_ci_reports
+          python main.py attack-chain -o /tmp/adft_ci_reports
+          python main.py attack-path -o /tmp/adft_ci_reports
+
+  tests-evtx:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install EVTX validation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev,evtx]"
+      - name: Run EVTX-specific checks
+        run: pytest -q adft/tests/test_evtx_resilience.py
